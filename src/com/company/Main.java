@@ -9,7 +9,7 @@ public class Main {
     public static void answer() throws IOException {
         InputStreamReader reader = new InputStreamReader(System.in);
         BufferedReader input = new BufferedReader(reader);
-        System.out.println("Enter what language you want translated to which language (ex: 'Python to Java'): ");
+        System.out.println("Enter what language you want translated to which language (ex: 'j2p'): ");
         String answer = input.readLine().toLowerCase();
         while (!answer.equals("j2p")) {
             System.out.println("!!! j2p !!!");

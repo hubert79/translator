@@ -10,11 +10,20 @@ public class Java extends Language{
 
     @Override
     public void translate(String str) throws IOException {
+
         String[] syntax = str.split(" ");
         String first = syntax[0];
 
-        if(first.equals("public")){
-            System.out.println("xxx");
+        for (String a : syntax){
+
+            //System.out.print(a);
+            if(a.equals("public")){
+                System.out.print("xxx");
+            }
+            else {
+                System.out.print(a);
+            }
+            System.out.print(" ");
         }
 
     }

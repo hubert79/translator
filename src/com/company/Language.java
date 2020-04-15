@@ -23,11 +23,14 @@ public void read() throws  IOException{
         String inputString = inFile.readLine();
 
         while (inputString != null) {
-        System.out.println(inputString);
+
+        //System.out.println(inputString);
+        System.out.println();
         this.translate(inputString);
         inputString = inFile.readLine();
         }
 
+        System.out.println();
         System.out.println("Reading completed.");
 
         inFile.close();
