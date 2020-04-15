@@ -12,8 +12,10 @@ public class Java extends Language{
     public void translate(String str) throws IOException {
         String[] syntax = str.split(" ");
         String first = syntax[0];
-        if (first.equals("/**")) {
+
+        if(first.equals("public")){
             System.out.println("xxx");
         }
+
     }
 }

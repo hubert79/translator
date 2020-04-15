@@ -24,11 +24,12 @@ public void read() throws  IOException{
 
         while (inputString != null) {
         System.out.println(inputString);
-        //this.translate(inputString);
+        this.translate(inputString);
         inputString = inFile.readLine();
         }
 
         System.out.println("Reading completed.");
+
         inFile.close();
         }
 

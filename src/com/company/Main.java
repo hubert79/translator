@@ -11,13 +11,11 @@ public class Main {
         BufferedReader input = new BufferedReader(reader);
         System.out.println("Enter what language you want translated to which language (ex: 'Python to Java'): ");
         String answer = input.readLine().toLowerCase();
-        while (!(answer.equals("python to java") || answer.equals("python to javascript") ||
-                answer.equals("java to python") || answer.equals("java to javascript") ||
-                answer.equals("javascript to java") || answer.equals("javascript to python"))) {
-            System.out.println("Invalid command. Re-enter: ");
+        while (!answer.equals("j2p")) {
+            System.out.println("!!! j2p !!!");
             answer = input.readLine().toLowerCase();
         }
-        if (answer.equals("java to python")) {
+        if (answer.equals("j2p")) {
             Language j = new Java("Python");
             j.read();
         }
