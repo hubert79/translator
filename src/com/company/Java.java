@@ -8,20 +8,20 @@ public class Java extends Language{
     public static final String JAVADOC1 = "/**";
     public static final String JAVADOC2 = "*";
     public static final String JAVADOC3 = "*/";
-    //public static final String IF = "if";
-    //public static final String ELSE = "else";
-    //public static final String WHILE = "while";
-    //public static final String FOR = "for";
+    public static final String IF = "if";
+    public static final String ELSE = "else";
+    public static final String WHILE = "while";
+    public static final String FOR = "for";
     public static final String I_STRUCTURE = "{";
     public static final String F_STRUCTURE = "}";
-    //public static final String PUBLIC = "public";
-    //public static final String VOID = "void";
-    //public static final String INT = "int";
-    //public static final String STRING = "String";
-    //public static final String DOUBLE = "double";
-    //public static final String CHAR = "char";
-    //public static final String BOOLEAN = "boolean";
-    //public static final String SEMI = ";";
+    public static final String PUBLIC = "public";
+    public static final String VOID = "void";
+    public static final String INT = "int";
+    public static final String STRING = "String";
+    public static final String DOUBLE = "double";
+    public static final String CHAR = "char";
+    public static final String BOOLEAN = "boolean";
+    public static final String SEMI = ";";
 
     public Java(String toLang) throws IOException {
         super(toLang);
@@ -54,8 +54,29 @@ public class Java extends Language{
             else if (a.equals(F_STRUCTURE)){
                 System.out.println();
             }
+            else if (a.equals(PUBLIC)){
+                String next = syntax[1];
+                if (next.equals("class")){
+                    System.out.println("class " + syntax[2] + "(object):");
+                }
+                else if (!(next.equals(INT) || next.equals(VOID)
+                        || next.equals(DOUBLE) || next.equals(STRING)
+                        || next.equals(BOOLEAN))){
+
+                    constructor(a);
+                }
+                else {
+                    method(a);
+                }
+            }
+            else if (first.equals(IF) || first.equals(WHILE) || first.equals(ELSE)){
+                ifWhileStatement(a);
+            }
+            else if (first.equals(FOR)){
+                forLoop(a);
+            }
             else {
-                System.out.print(a);
+                body(a);
             }
             System.out.print(" ");
         }
