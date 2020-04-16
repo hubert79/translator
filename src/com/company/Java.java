@@ -5,9 +5,9 @@ import java.io.IOException;
 public class Java extends Language{
 
     public static final String COMMENT = "//";
-    //public static final String JAVADOC1 = "/**";
-    //public static final String JAVADOC2 = "*";
-    //public static final String JAVADOC3 = "*/";
+    public static final String JAVADOC1 = "/**";
+    public static final String JAVADOC2 = "*";
+    public static final String JAVADOC3 = "*/";
     //public static final String IF = "if";
     //public static final String ELSE = "else";
     //public static final String WHILE = "while";
@@ -38,6 +38,15 @@ public class Java extends Language{
             //System.out.print(a);
             if(a.equals(COMMENT)){
                 lineComment(a);
+            }
+            else if (a.equals(JAVADOC1)){
+                System.out.print("\"\"\"");
+            }
+            else if (a.equals(JAVADOC2)){
+                longComment(a);
+            }
+            else if (a.equals(JAVADOC3)){ ;
+                System.out.print("\"\"\"");
             }
             else {
                 System.out.print(a);
@@ -86,6 +95,6 @@ public class Java extends Language{
     @Override
     public void longComment(String str) throws IOException{
 
-        System.out.println("test");
+        System.out.print(str.replace("* ", ""));
     }
 }
