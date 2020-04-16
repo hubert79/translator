@@ -12,8 +12,8 @@ public class Java extends Language{
     //public static final String ELSE = "else";
     //public static final String WHILE = "while";
     //public static final String FOR = "for";
-    //public static final String I_STRUCTURE = "{";
-    //public static final String F_STRUCTURE = "}";
+    public static final String I_STRUCTURE = "{";
+    public static final String F_STRUCTURE = "}";
     //public static final String PUBLIC = "public";
     //public static final String VOID = "void";
     //public static final String INT = "int";
@@ -47,6 +47,12 @@ public class Java extends Language{
             }
             else if (a.equals(JAVADOC3)){ ;
                 System.out.print("\"\"\"");
+            }
+            else if (a.equals(I_STRUCTURE)){
+                System.out.println();
+            }
+            else if (a.equals(F_STRUCTURE)){
+                System.out.println();
             }
             else {
                 System.out.print(a);
