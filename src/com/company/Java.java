@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class Java extends Language{
 
@@ -76,7 +77,8 @@ public class Java extends Language{
                 forLoop(a);
             }
             else {
-                body(a);
+                //body(a);
+                System.out.print(a);
             }
             System.out.print(" ");
         }
@@ -86,31 +88,80 @@ public class Java extends Language{
     @Override
     public void constructor(String str) throws IOException{
 
-        System.out.println("test");
+        String[] syntax = str.split(" ");
+        // public Java(String str, int y) {
+        // public Java (String str, int y) { MUST WORK FOR ALL CASES
+        // public Java ( String str , int y ) {
+        String parameters = "";
+        String parameter;
+        for (int i = 0; i < syntax.length; i++) {
+            parameter = syntax[i];
+            if (!(parameter.equals(STRING) || parameter.equals(INT) || parameter.equals(DOUBLE)
+                    || parameter.equals("(") || parameter.equals(")"))) {
+                parameters+= " " + parameter.replace("(", "").replace(")", "");
+            }
+        }
+
+        boolean isComment = false;
+        StringTokenizer st = new StringTokenizer(str);
+        String name = st.nextToken(); //"public"
+        name = st.nextToken();
+        //String parameters = "";
+        //String parameter;
+        do {
+            parameter = st.nextToken().replace("(", "");
+            if (parameter.equals(COMMENT)) {
+                isComment = true;
+                break;
+            } else if (!(parameter.equals(STRING) || parameter.equals(INT) || parameter.equals(DOUBLE))) {
+                parameters+= " " + parameter;
+            }
+        } while(st.hasMoreTokens());
+        parameters = parameters.replace(")", "");
+        if (toLang.equals("Python")) {
+            if (parameters.equals(" ")) {
+                System.out.print("def __init__(self):");
+            } else {
+                System.out.println("def __init__(self," + parameters + "):");
+            }
+        } else {
+            System.out.print("function " + name + " (" + parameters + ")");
+        }
+        if (isComment) {
+            String comment = "";
+            String next;
+            do {
+                next = st.nextToken();
+                if (!(next.equals(COMMENT))) {
+                    comment+= " " + next;
+                }
+            } while (st.hasMoreTokens());
+            this.lineComment(comment);
+        }
     }
 
     @Override
     public void method(String str) throws IOException{
 
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     @Override
     public void body(String str) throws IOException{
 
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     @Override
     public void forLoop(String str) throws IOException{
 
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     @Override
     public void ifWhileStatement(String str) throws IOException{
 
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     @Override
