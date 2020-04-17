@@ -52,7 +52,7 @@ public class Java extends Language{
                 System.out.print("\"\"\"");
             }
             else if (a.equals(I_STRUCTURE)){
-                System.out.println();
+                System.out.println(" ");
             }
             else if (a.equals(F_STRUCTURE)){
                 System.out.println();
