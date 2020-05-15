@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+// /Users/hubertmakula/documents/iwo.txt
+
 public class Java extends Language{
 
     public static final String COMMENT = "//";
@@ -55,7 +57,7 @@ public class Java extends Language{
                 System.out.println(" ");
             }
             else if (a.equals(F_STRUCTURE)){
-                System.out.println();
+                System.out.print("");
             }
             else if (a.equals(PUBLIC)){
                 String next = syntax[1];
