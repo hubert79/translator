@@ -9,7 +9,7 @@
         <module name="translator" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel>
       <module name="translator" target="11" />
     </bytecodeTargetLevel>
   </component>
