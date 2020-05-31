@@ -1,4 +1,4 @@
-//Java -jar /usr/local/lib/antlr-4.8-complete.jar gramatyka.g4
+// Java -jar /usr/local/lib/antlr-4.8-complete.jar gramatyka.g4
 
 grammar gramatyka;
 
