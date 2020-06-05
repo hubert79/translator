@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/target/target.iml" filepath="$PROJECT_DIR$/target/target.iml" />
       <module fileurl="file://$PROJECT_DIR$/translator.iml" filepath="$PROJECT_DIR$/translator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/translator1.iml" filepath="$PROJECT_DIR$/src/translator1.iml" />
     </modules>
   </component>
 </project>
