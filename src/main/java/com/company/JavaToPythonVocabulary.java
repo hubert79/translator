@@ -10,13 +10,7 @@ public class JavaToPythonVocabulary {
 
     private static Map<Integer, String> javaYoPythonVocabulary = new HashMap<>();
 
-    public static Map<Integer, String> getJavaYoPythonVocabulary() {
-        return javaYoPythonVocabulary;
-    }
-
-
-
-    public static void setJavaYoPythonVocabulary(Map<Integer, String> javaYoPythonVocabulary) {
+    public JavaToPythonVocabulary() {
         javaYoPythonVocabulary.put(Java8Lexer.CLASS,  "class");
 
         javaYoPythonVocabulary.put(Java8Lexer.PUBLIC, "public");
@@ -48,7 +42,9 @@ public class JavaToPythonVocabulary {
         javaYoPythonVocabulary.put(Java8Lexer.COMMA, ",");
         javaYoPythonVocabulary.put(Java8Lexer.DOT, ".");
 
+    }
 
-
+    public static Map<Integer, String> getJavaYoPythonVocabulary() {
+        return javaYoPythonVocabulary;
     }
 }
