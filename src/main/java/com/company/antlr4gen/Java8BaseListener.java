@@ -1,4 +1,6 @@
-// Generated from Java8.g4 by ANTLR 4.7.1
+package com.company.antlr4gen;
+// Generated from /home/filo/IdeaProjects/translator/src/main/antlr4/Java8.g4 by ANTLR 4.8
+
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
