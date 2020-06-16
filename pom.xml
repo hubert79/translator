@@ -15,8 +15,9 @@
     <dependencies>
         <dependency>
             <groupId>org.antlr</groupId>
-            <artifactId>antlr4-runtime</artifactId>
+            <artifactId>antlr4-master</artifactId>
             <version>4.7.1</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
 
@@ -42,7 +43,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>
